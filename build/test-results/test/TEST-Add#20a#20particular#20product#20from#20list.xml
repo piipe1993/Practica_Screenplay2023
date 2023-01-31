@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Add a particular product from list" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-01-31T02:58:59" hostname="SQAMED-SQA4389" time="15.858">
+  <properties/>
+  <testcase name="Add individual product" classname="Add a particular product from list" time="15.858">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expected: a string containing &quot;Light&quot;&#13;&#10;     but: was &quot;&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: a string containing &quot;Light&quot;
+     but: was &quot;&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:353)
+	at stepDefinitions.AddToCartStepDefinitions.heShouldSeeTheProductAndPriceInsideTheShoppingCart(AddToCartStepDefinitions.java:38)
+	at ✽.He should see the Light and price inside the shopping cart(file:///C:/Andres/Automatizacion/SwagLabs_Practice/src/test/resources/features/addToCart.feature:9)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Light
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 55837
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ene. 30, 2023 9:59:01 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+ene. 30, 2023 9:59:01 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+ene. 30, 2023 9:59:01 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+ene. 30, 2023 9:59:01 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
