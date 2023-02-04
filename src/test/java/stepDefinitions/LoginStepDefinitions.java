@@ -1,7 +1,9 @@
 package stepDefinitions;
 
 import com.saucedemo.questions.ValidateFailedLogin;
+import com.saucedemo.questions.ValidateInfoInCart;
 import com.saucedemo.questions.ValidateTitle;
+import com.saucedemo.tasks.AddCart;
 import com.saucedemo.tasks.Login;
 import com.saucedemo.ui.LoginPage;
 import io.cucumber.java.en.Given;
@@ -29,6 +31,8 @@ public class LoginStepDefinitions {
         theActorInTheSpotlight().attemptsTo(
                 Login.withCredentials(username, password)
         );
+
+
     }
 
     @Then("^he should see the (.*) products at Home page$")

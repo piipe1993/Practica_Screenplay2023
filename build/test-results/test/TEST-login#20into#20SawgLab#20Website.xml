@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="login into SawgLab Website" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-02-04T20:46:29" hostname="SQAMED-SQA4389" time="51.212">
+  <properties/>
+  <testcase name="Successful login #1" classname="login into SawgLab Website" time="30.036"/>
+  <testcase name="Successful login #2" classname="login into SawgLab Website" time="11.668"/>
+  <testcase name="Failed login #1" classname="login into SawgLab Website" time="4.769"/>
+  <testcase name="Failed login #2" classname="login into SawgLab Website" time="4.737"/>
+  <system-out><![CDATA[|-- 1: Successful login ({user=standard_user, password=secret_sauce, tittle=Products})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials standard_user and secret_sauce
+|------ Andres login
+|-------- Andres enters 'standard_user' into Input to put the Username
+|-------- Andres enters 'secret_sauce' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the Products products at Home page
+|------ Then The expected title on the home page is should be 'Products'
+|-- 2: Successful login ({user=performance_glitch_user, password=secret_sauce, tittle=Products})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials performance_glitch_user and secret_sauce
+|------ Andres login
+|-------- Andres enters 'performance_glitch_user' into Input to put the Username
+|-------- Andres enters 'secret_sauce' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the Products products at Home page
+|------ Then The expected title on the home page is should be 'Products'
+|-- 1: Failed login ({user=Andres, password=Andres098, alert=Epic sadface: Username and password do not match any user in this service})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials Andres and Andres098
+|------ Andres login
+|-------- Andres enters 'Andres' into Input to put the Username
+|-------- Andres enters 'Andres098' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the alert message Epic sadface: Username and password do not match any user in this service at Login page
+|------ Then The expected message when login fails is: should be 'Epic sadface: Username and password do not match any user in this service'
+|-- 2: Failed login ({user=locked_out_user, password=secret_sauce, alert=Epic sadface: Sorry, this user has been locked out.})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials locked_out_user and secret_sauce
+|------ Andres login
+|-------- Andres enters 'locked_out_user' into Input to put the Username
+|-------- Andres enters 'secret_sauce' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the alert message Epic sadface: Sorry, this user has been locked out. at Login page
+|------ Then The expected message when login fails is: should be 'Epic sadface: Sorry, this user has been locked out.'
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 53723
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:46:33 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:46:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:46:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:46:34 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 64500
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 56492
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 54702
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

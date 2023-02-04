@@ -21,4 +21,4 @@ Feature:login into SawgLab Website
     Examples:
       | user            | password     | alert                                                                     |
       | Andres          | Andres098    | Epic sadface: Username and password do not match any user in this service |
-      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                                            |
+      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |

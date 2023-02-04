@@ -1,5 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
 "Add a particular product from list","Successful login","ERROR","2023-01-29T11:59:23.2274989-05:00[America/Bogota]","0.0","16.54"
-"Add a particular product from list","Add individual product","FAILURE","2023-01-30T21:58:59.3748263-05:00[America/Bogota]","0.0","15.72"
-"login into SawgLab Website","Successful login","SUCCESS","2023-01-30T21:47:46.7289069-05:00[America/Bogota]","0.0","20.14"
-"login into SawgLab Website","Failed login","SUCCESS","2023-01-30T21:48:06.8804531-05:00[America/Bogota]","0.0","6.1"
+"Add a particular product from list","Add individual product","SUCCESS","2023-02-04T15:44:17.8511782-05:00[America/Bogota]","0.0","37.29"
+"login into SawgLab Website","Successful login","SUCCESS","2023-02-04T15:46:29.2790519-05:00[America/Bogota]","0.0","41.44"
+"login into SawgLab Website","Failed login","SUCCESS","2023-02-04T15:47:10.7400209-05:00[America/Bogota]","0.0","9.49"

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="login into SawgLab Website" skipped="0" tests="4" time="26.24" timestamp="2023-01-30 09:47:46"><testcase name="Successful login"/><testcase name="Failed login"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="login into SawgLab Website" skipped="0" tests="4" time="50.93" timestamp="2023-02-04 03:46:29"><testcase name="Successful login"/><testcase name="Failed login"/></testsuite>

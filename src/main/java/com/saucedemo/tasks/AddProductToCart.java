@@ -6,9 +6,12 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class AddProductToCart implements Task {
 
@@ -25,8 +28,10 @@ public class AddProductToCart implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-
-                Click.on(HomePage.PRODUCTS_LIST.of(producto)),
+                WaitUntil.the(HomePage.PRODUCT_LIST.of(producto), isPresent()).forNoMoreThan(2).seconds(),
+                Click.on(HomePage.PRODUCT_LIST.of(producto)),
+               Click.on(HomePage.ADDTOCART_BUTTON),
+               //MoveMouse.to(HomePage.CART_LOGO),
                 Click.on(HomePage.CART_LOGO)
 
         );

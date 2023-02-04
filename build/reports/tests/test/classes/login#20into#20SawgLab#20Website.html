@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class login into SawgLab Website</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class login into SawgLab Website</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; login into SawgLab Website</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">51.210s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Failed login #1</td>
+<td class="success">4.769s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Failed login #2</td>
+<td class="success">4.737s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Successful login #1</td>
+<td class="success">30.036s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Successful login #2</td>
+<td class="success">11.668s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>|-- 1: Successful login ({user=standard_user, password=secret_sauce, tittle=Products})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials standard_user and secret_sauce
+|------ Andres login
+|-------- Andres enters 'standard_user' into Input to put the Username
+|-------- Andres enters 'secret_sauce' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the Products products at Home page
+|------ Then The expected title on the home page is should be 'Products'
+|-- 2: Successful login ({user=performance_glitch_user, password=secret_sauce, tittle=Products})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials performance_glitch_user and secret_sauce
+|------ Andres login
+|-------- Andres enters 'performance_glitch_user' into Input to put the Username
+|-------- Andres enters 'secret_sauce' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the Products products at Home page
+|------ Then The expected title on the home page is should be 'Products'
+|-- 1: Failed login ({user=Andres, password=Andres098, alert=Epic sadface: Username and password do not match any user in this service})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials Andres and Andres098
+|------ Andres login
+|-------- Andres enters 'Andres' into Input to put the Username
+|-------- Andres enters 'Andres098' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the alert message Epic sadface: Username and password do not match any user in this service at Login page
+|------ Then The expected message when login fails is: should be 'Epic sadface: Username and password do not match any user in this service'
+|-- 2: Failed login ({user=locked_out_user, password=secret_sauce, alert=Epic sadface: Sorry, this user has been locked out.})
+|---- Given Andres Enters of the SawgLab website
+|------ Andres opens the Login page
+|---- When he sends the following credentials locked_out_user and secret_sauce
+|------ Andres login
+|-------- Andres enters 'locked_out_user' into Input to put the Username
+|-------- Andres enters 'secret_sauce' into Input to put the Password
+|-------- Andres clicks on Login Button
+|---- Then he should see the alert message Epic sadface: Sorry, this user has been locked out. at Login page
+|------ Then The expected message when login fails is: should be 'Epic sadface: Sorry, this user has been locked out.'
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 53723
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:46:33 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:46:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:46:34 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:46:34 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 64500
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:47:00 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 56492
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:47:12 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 54702
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 109, so returning the closest version found: a no-op implementation
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 109.
+feb. 04, 2023 3:47:17 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.4.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 4/02/2023, 3:47:24 p. m.</p>
+</div>
+</div>
+</body>
+</html>
